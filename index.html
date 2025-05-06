@@ -19,16 +19,16 @@
 
     <div class="game-area">
         <div class="controls-area">
-            <button class="btn btn--big btn-green">
+            <button data-type="addition" class="btn btn--big btn--green">
                 <i class="fas fa-plus"></i>
             </button>
-            <button class="btn btn--big btn-blue">
+            <button data-type="subtract" class="btn btn--big btn--blue">
                 <i class="fas fa-minus"></i>
             </button>
-            <button class="btn btn--big btn-orange">
+            <button data-type="multiply" class="btn btn--big btn--orange">
                 <i class="fas fa-times"></i>
             </button>
-            <button class="btn btn--big btn-red">
+            <button data-type="division" class="btn btn--big btn--red">
                 <i class="fas fa-divide"></i>
             </button>
         </div>
@@ -40,18 +40,14 @@
            <p class="answer-message">Enter Answer:</p>
            <input type="number" id="answer-box">
         </div>
-        <button class="btn btn--gray">Submit Answer</button>
+        <button class="btn btn--gray" data-type="submit">Submit Answer</button>
     </div>
 
     <div class="score-area">
         <p class="scores">Correct Answers <span id="score">0</span></p>
         <p class="scores">Incorrect Answers <span id="incorrect">0</span></p>
     </div>
-
-
     
     <script src="assets/js/script.js"></script>
-    <!-- Font awesome script --> 
-    <!--<script src="https://kit.fontawesome.com/6ec5d9a39e.js" crossorigin="anonymous"></script>-->
 </body>
 </html>
