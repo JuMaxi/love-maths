@@ -14,6 +14,13 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         })
     }
+
+    // This event allows the user type Enter instead of click to submit an answer
+    document.getElementById("answer-box").addEventListener("keydown", function(event){
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+    })
     runGame("addition");
 })
 
@@ -22,6 +29,11 @@ document.addEventListener("DOMContentLoaded", function() {
  * and after the user's answer been processed
  */
 function runGame(gameType) {
+    // Clean the field input after the user type a answer and submit it
+    document.getElementById("answer-box").value = "";
+    // Each time the game run, the field input will have the cursor on this again
+    document.getElementById("answer-box").focus();
+
     // Creates two numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
     let num2 = Math.floor(Math.random() * 25) + 1;
